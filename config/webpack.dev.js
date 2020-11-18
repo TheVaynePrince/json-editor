@@ -10,6 +10,14 @@ module.exports = webpackMerge(commonConfig, {
     path: helpers.root('dist/dev'),
     publicPath: '/dist/',
     filename: '[name].js',
+    chunkFilename: '[id].chunk.js',
     libraryTarget: 'umd'
+  },
+
+  devServer: {
+    contentBase: helpers.root('.'),
+    historyApiFallback: true,
+    // stats: 'minimal',
+    port: 8080
   }
 })

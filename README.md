@@ -276,16 +276,6 @@ Here are all the available options:
     <td>Preserve value at Move Up or Down.(No value is selected automatically upon deletion.)</td>
     <td><code>true</code></td>
   </tr>
-  <tr>
-    <td>max_depth</td>
-    <td>Max depth of the nested properties to be rendered of provided json schema. The missing of this option could cause "maximum call stack size exceeded" in case of object properties with circular references. <code>0</code> value means "render all".</td>
-    <td><code>0</code></td>
-  </tr>
-  <tr>
-    <td>use_default_values</td>
-    <td>If true default values based on the "type" of the property will be used</td>
-    <td><code>true</code></td>
-  </tr>
   </tbody>
 </table>
 
@@ -1604,26 +1594,6 @@ JSONEditor.defaults.custom_validators.push((schema, value, path) => {
   }
   return errors;
 });
-```
-
-Override Editors Methods
-----------------
-
-```js
-// override class method
-JSONEditor.defaults.editors.integer.prototype.sanitize = function(value) {
-  return value
-}; 
-```
-
-or
-
-```js
-// override object method
-var path ="root.integerfield";
-editor.getEditor(path).sanitize = function(value) {
-  return value
-};
 ```
 
 Support Legacy Browser (not tested)

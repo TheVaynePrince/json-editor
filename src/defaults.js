@@ -251,11 +251,7 @@ languages.en = {
   /**
   * Default title for array items
   */
-  default_array_item_title: 'item',
-  /**
-  * Warning when deleting a node
-  */
-  button_delete_node_warning: 'Are you sure you want to remove this node?'
+  default_array_item_title: 'item'
 }
 
 /* Default per-editor options */
@@ -287,9 +283,7 @@ function translate (key, variables) {
 /* Default options when initializing JSON Editor */
 const options = {
   upload,
-  prompt_before_delete: true,
-  use_default_values: true,
-  max_depth: 0
+  prompt_before_delete: true
 }
 
 /* This assignment was previously in index.js but makes more sense here */

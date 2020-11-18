@@ -1,5 +1,4 @@
 import { AbstractTheme } from '../theme.js'
-import rules from './bootstrap3.css'
 
 export class bootstrap3Theme extends AbstractTheme {
   getSelectInput (options, multiple) {
@@ -301,4 +300,4 @@ export class bootstrap3Theme extends AbstractTheme {
 }
 
 /* Custom stylesheet rules. format: "selector" : "CSS rules" */
-bootstrap3Theme.rules = rules
+bootstrap3Theme.rules = { 'div[data-schemaid="root"]:after': 'position:relative;color:red;margin:10px 0;font-weight:600;display:block;width:100%;text-align:center;content:"This is an old JSON-Editor 1.x Theme and might not display elements correctly when used with the 2.x version"' }
